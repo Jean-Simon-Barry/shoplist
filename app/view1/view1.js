@@ -10,6 +10,6 @@ angular.module('myApp.view1', ['ngRoute'])
 }])
 
 .controller('View1Ctrl', ['$scope', function($scope) {
-    $scope.name = "hello view 1!!";o
+    $scope.name = "hello view 1!!";
 
 }]);
