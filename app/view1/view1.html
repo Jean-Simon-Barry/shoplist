@@ -1,2 +1,39 @@
+<style type="text/css">
+div.inline { float:left; }
+.clearBoth { clear:both; }
+</style>
 <p>This is the partial for view 1.</p>
-<p>{{name}}</p>
+<form ng-submit="basket.addItem(text, 'produceSection');
+		 text='';">
+  <input type="text" 
+	 ng-model="text" 
+	 name="text" 
+	 placeholder="enter items here"/>
+
+  <input type="submit" 
+	 id="submit" 
+	 value="add" />
+</form>
+<form ng-submit="basket.addItem(meat, 'meatSection');
+		 meat='';">
+  <input type="text" 
+	 ng-model="meat" 
+	 name="meat" 
+	 placeholder="enter meat here"/>
+
+  <input type="submit" 
+	 id="submit" 
+	 value="add" />
+</form>
+<div id="list-container" class="inline">
+  <div id="produce-basket" class="inline">
+    <ul ng-repeat="item in basket.shoppingList().produceSection track by $index">
+      <li>{{item}}</li>
+    </ul>
+  </div>
+  <div id="meat-basket" class="inline">
+    <ul ng-repeat="item in basket.shoppingList().meatSection track by $index">
+      <li>{{item}}</li>
+    </ul>
+  </div> 
+</div> 
