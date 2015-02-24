@@ -14,17 +14,6 @@ div.inline { float:left; }
 	 id="submit" 
 	 value="add" />
 </form>
-<form ng-submit="basket.addItem(meat, 'meatSection');
-		 meat='';">
-  <input type="text" 
-	 ng-model="meat" 
-	 name="meat" 
-	 placeholder="enter meat here"/>
-
-  <input type="submit" 
-	 id="submit" 
-	 value="add" />
-</form>
 <div id="list-container" class="inline">
   <div id="produce-basket" class="inline">
     <ul ng-repeat="item in basket.shoppingList().produceSection track by $index">
