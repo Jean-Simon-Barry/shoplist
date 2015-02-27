@@ -1,7 +1,7 @@
 'use strict';
 
 //view1 is the main view for now with user input and view on the objects in list.
-angular.module('myApp.view1', ['ngRoute', 'myApp.itemAdder'])
+angular.module('myApp.view1', ['ngRoute', 'myApp.itemAdder', 'myApp.shoppingList'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {
